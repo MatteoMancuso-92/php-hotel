@@ -67,6 +67,24 @@
                     }
                     ?>
                     </thead>
+                    <tbody>
+
+                        <?php foreach($hotels as $item){ ?>
+                            <tr>
+                                <td><?php echo $item['name']; ?></td>
+                                <td><?php echo $item['description']; ?></td>
+                                <td>
+                                    <?php if($item['parking']){
+                                        echo 'Si';
+                                    }else{
+                                        echo 'No';
+                                    }; ?>
+                                </td>
+                                <td><?php echo $item['vote']; ?></td>
+                                <td><?php echo $item['distance_to_center']." Km"; ?></td>
+                            </tr>
+                        <?php }?>
+                    </tbody>
                 </table>
             </div>
         </div>
